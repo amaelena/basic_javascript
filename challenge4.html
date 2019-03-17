@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: 100%;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    function upDate(previewPic) {
+      var src=previewPic.getAttribute("src");
+      var alt=previewPic.getAttribute("alt");
+      document.getElementById('image').style.backgroundImage="url('"+src+"')";
+      document.getElementById('image').innerHTML=alt;
+    }
+    function unDo(B) {
+      B=document.getElementById('image');
+      B.style.backgroundImage="url('')";
+      document.getElementById('image').innerHTML="Hover or tab over/into an image below.";
+    }
+    // I used Two functions here.  Starter idea at:
+    // https://codepen.io/ColleenEMc/pen/XmZzWw
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 4</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"
+            alt = "Sunflower"
+            src = "https://cdn.pixabay.com/photo/2016/08/26/12/03/sun-flower-1621990_1280.jpg"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()"
+            tabindex="1">
+
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"
+            alt = "Rose"
+            src = "https://cdn.pixabay.com/photo/2014/02/15/18/09/rose-266785_1280.jpg"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()"
+            tabindex="2">
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview"
+            src = "https://cdn.pixabay.com/photo/2013/08/31/18/13/tulips-177889_1280.jpg"
+            alt = "Tulip"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()"
+            tabindex="3">
+
+        <img class = "preview"
+            src = "https://cdn.pixabay.com/photo/2016/07/12/17/30/flower-1512646_1280.jpg"
+            alt = "Bellflower"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()"
+            tabindex="4">
+
+        <img class = "preview"
+            src = "https://cdn.pixabay.com/photo/2014/08/21/14/25/carnation-423394_1280.jpg"
+            alt = "Carnation"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()"
+            tabindex="5">
+
+        <img class = "preview"
+            src = "https://cdn.pixabay.com/photo/2013/06/29/06/24/lotus-142028_1280.jpg"
+            alt = "Lotus"
+            onmouseover="upDate(this)"
+            onmouseout="unDo()"
+            onfocus="upDate(this)"
+            onblur="unDo()"
+            tabindex="6">
+</body>
+</html>
