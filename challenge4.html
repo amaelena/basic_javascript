@@ -38,15 +38,13 @@
 
     <script>
     function upDate(previewPic) {
-      var src=previewPic.getAttribute("src");
-      var alt=previewPic.getAttribute("alt");
-      document.getElementById('image').style.backgroundImage="url('"+src+"')";
-      document.getElementById('image').innerHTML=alt;
+      document.querySelector('#image').style.backgroundImage='url('+previewPic.src+')';
+      document.querySelector('#image').innerHTML=previewPic.getAttribute('alt');
     }
     function unDo(B) {
-      B=document.getElementById('image');
+      B=document.querySelector('#image');
       B.style.backgroundImage="url('')";
-      document.getElementById('image').innerHTML="Hover or tab over/into an image below.";
+      document.querySelector('#image').innerHTML="Hover or tab over/into an image below.";
     }
     // I used Two functions here.  Starter idea at:
     // https://codepen.io/ColleenEMc/pen/XmZzWw
